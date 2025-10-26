@@ -23,8 +23,11 @@ public class ClientThread extends Thread{
             os = SocClient.getOutputStream();
             PrintWriter out = new PrintWriter(os, true);
 
+            String cnsl = "Client Connected with IP:["+SocClient.getInetAddress()+"] ID:["+getClientID()+"]";
             String res = " your IP: "+SocClient.getInetAddress()+", your Server ID: "+getClientID();
+            System.out.println(cnsl);
             out.println(res);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

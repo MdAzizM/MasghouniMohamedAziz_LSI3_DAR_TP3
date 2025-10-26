@@ -9,7 +9,7 @@ public class Server {
             int ClientOrder = 0;
             int port = 1234;
             ServerSocket server = new ServerSocket(port);
-            System.out.print("server online on "+port);
+            System.out.println("server online on "+port);
             while(true){
                 Socket SocketClient = server.accept();
                 ClientOrder++;
